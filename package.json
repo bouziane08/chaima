@@ -1,0 +1,77 @@
+{
+  "name": "enterprise-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "مشروع متكامل - Enterprise Project",
+  "keywords": [
+    "nextjs",
+    "nestjs",
+    "typescript",
+    "monorepo",
+    "turborepo"
+  ],
+  "homepage": "https://github.com/yourusername/enterprise-project",
+  "bugs": {
+    "url": "https://github.com/yourusername/enterprise-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/enterprise-project.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://github.com/yourusername"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "docker:dev": "docker-compose up -d",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up -d",
+    "docker:down": "docker-compose down",
+    "db:migrate": "cd apps/api && npx prisma migrate dev",
+    "db:generate": "cd apps/api && npx prisma generate",
+    "db:studio": "cd apps/api && npx prisma studio",
+    "db:seed": "cd apps/api && npx prisma db seed",
+    "version": "standard-version",
+    "release": "git push --follow-tags origin main"
+  },
+  "devDependencies": {
+    "turbo": "^1.12.4",
+    "prettier": "^3.2.5",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2",
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "standard-version": "^9.5.0"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml}": [
+      "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

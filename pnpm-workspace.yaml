@@ -1,0 +1,9 @@
+packages:
+  # التطبيقات الرئيسية
+  - 'apps/*'
+  # الحزم المشتركة
+  - 'packages/*'
+  # استبعاد مجلدات node_modules
+  - '!**/node_modules/**'
+  - '!**/dist/**'
+  - '!**/build/**'

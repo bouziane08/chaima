@@ -1,0 +1,134 @@
+# نص عادي
+*.txt text diff
+*.md text diff
+*.json text diff
+*.yaml text diff
+*.yml text diff
+*.toml text diff
+*.xml text diff
+*.csv text diff
+
+# كود المصدر
+*.js text diff linguist-language=javascript
+*.jsx text diff linguist-language=jsx
+*.ts text diff linguist-language=typescript
+*.tsx text diff linguist-language=typescript
+*.css text diff linguist-language=css
+*.scss text diff linguist-language=scss
+*.html text diff linguist-language=html
+*.php text diff linguist-language=php
+*.py text diff linguist-language=python
+*.rb text diff linguist-language=ruby
+*.go text diff linguist-language=go
+*.rs text diff linguist-language=rust
+*.java text diff linguist-language=java
+*.kt text diff linguist-language=kotlin
+*.swift text diff linguist-language=swift
+
+# ملفات التكوين
+*.env text
+.env.* text
+.eslintrc* text
+.prettierrc* text
+.gitignore text
+.dockerignore text
+
+# الصور
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.webp binary
+
+# الملفات المضغوطة
+*.zip binary
+*.tar.gz binary
+*.tgz binary
+*.rar binary
+*.7z binary
+
+# المستندات
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+
+# ملفات الوسائط
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.mov binary
+*.avi binary
+
+# ملفات Docker
+Dockerfile text
+.dockerignore text
+docker-compose*.yml text
+
+# ملفات GitHub
+.github/** text
+
+# ملفات السجلات والذاكرة المؤقتة
+*.log binary
+*.cache binary
+*.lock binary
+
+# نهايات الأسطر
+* text=auto
+
+# توحيد نهايات الأسطر
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# ملفات خاصة بـ Git
+.gitattributes export-ignore
+.gitignore export-ignore
+
+# ملفات CI/CD
+.github export-ignore
+.gitlab export-ignore
+
+# توثيق المشروع
+/docs/** export-ignore
+
+# اختبارات
+/tests/** export-ignore
+/__tests__/** export-ignore
+*.test.ts export-ignore
+*.spec.ts export-ignore
+
+# أدوات التطوير
+/.vscode export-ignore
+/.idea export-ignore
+/.vs export-ignore
+
+# ملفات محلية
+.env* export-ignore
+*.local export-ignore
+
+# ملفات مؤقتة
+*.tmp export-ignore
+*.temp export-ignore
+*.swp export-ignore
+*.swo export-ignore
+
+# الحفاظ على أذونات الملفات
+*.sh text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+
+# ملفات محددة للغة العربية
+*.ar.* text
+*.ar.md text diff
+
+# إحصائيات المشروع
+git-archive --format tar.gz --output project.tar.gz HEAD
